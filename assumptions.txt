@@ -1,0 +1,31 @@
+Key Simplifications Made:
+No Database: Assumes all data can be passed through workflow parameters
+No User Management: Assumes single customer scenario for demo
+No Complex Routing: Assumes simple point-to-point or waypoint routing
+No Time Zones: Assumes single time zone operation
+No Internationalization: Assumes English-only notifications
+No Complex Business Rules: Assumes simple threshold-based logic
+
+Service Integration:
+Mock implementations are sufficient for demonstration
+
+Traffic Data Structure:
+  - Assumes delay can be expressed in simple minutes
+  - Traffic conditions fit into predefined categories
+  - Single delay value per route
+API integrations:
+    - Google maps API: real-time traffic details are available
+    - Mocked API integrations for demonstration purposes only
+    - Simple prompt engineering is sufficient
+    - AI-generated messages do not require content filtering
+    - Notifications: No complex templating or personalization needed
+
+Assuming that we're not sending the same notification to multiple users.
+Assuming that we're not doing optimizations for calling the APIs.
+Assuming that we're not feeding delay reasons to the AI.
+Assuming that no monitoring and alerting for this demo.
+
+What happens when google API doesn't return traffic data?
+- we could use cached traffic data
+- we could use historical traffic data
+- we should have a manual triggering mechanism to handle situations where the delay is communicated directly by the company
