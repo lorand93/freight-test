@@ -161,7 +161,7 @@ npm run client
 - **Fallback**: Mock SMS sending for demo purposes
 
 ### Temporal Web UI
-Access the Temporal Web UI at `http://localhost:8088`.
+Access the Temporal Web UI at `http://localhost:8080`.
 
 ## Development
 
