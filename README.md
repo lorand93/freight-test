@@ -1,6 +1,11 @@
 # Freight Delay Notification System
 
 A TypeScript application using Temporal workflow engine to monitor freight delivery routes for traffic delays and automatically notify customers when delays exceed specified thresholds.
+## Demo video:
+
+
+https://github.com/user-attachments/assets/511ef0c2-948b-42bb-9e44-1b0f9540ae7e
+
 
 ## Assumptions
 ### Key Simplifications Made
