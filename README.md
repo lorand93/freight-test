@@ -2,6 +2,51 @@
 
 A TypeScript application using Temporal workflow engine to monitor freight delivery routes for traffic delays and automatically notify customers when delays exceed specified thresholds.
 
+## Assumptions
+### Key Simplifications Made
+
+- **No Database**: All data is assumed to be passed through workflow parameters.
+- **No User Management**: Single-customer scenario assumed for demo purposes.
+- **No Complex Routing**: Only simple point-to-point or waypoint routing considered.
+- **No Time Zones**: Assumes operation within a single time zone.
+- **No Internationalization**: Notifications are English-only.
+- **No Complex Business Rules**: Logic is based on simple thresholds.
+
+### Service Integration
+
+- Mock implementations are used and sufficient for demonstration purposes.
+
+### Traffic Data Structure
+
+- Delay is represented as a single value in minutes.
+- Traffic conditions fall into predefined categories.
+- Only one delay value is associated per route.
+
+### API Integrations
+
+- **Google Maps API** is assumed to provide real-time traffic details.
+- API calls are mocked for demonstration.
+- Simple prompt engineering is used for message generation.
+- AI-generated messages do not require advanced content filtering.
+- Notifications use static templates with no personalization logic.
+
+### Other Assumptions
+
+- Notifications are not sent to multiple users.
+- No API call optimization is implemented.
+- Delay reasons are not passed to the AI.
+- No monitoring or alerting is included in the demo.
+
+### Fallback Strategy for Missing Traffic Data
+
+If Google API fails to return traffic data:
+1. Attempt to use cached traffic data.
+2. Fall back to historical traffic data.
+3. If neither is available:
+   - Trigger an alert.
+   - Pause the workflow.
+   - Provide a manual triggering option to allow direct company communication of delays.
+
 ## Overview
 
 This system implements a complete freight delay notification workflow that:
