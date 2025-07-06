@@ -28,4 +28,5 @@ Assuming that no monitoring and alerting for this demo.
 What happens when google API doesn't return traffic data?
 - we could use cached traffic data
 - we could use historical traffic data
+- if none of the above is available we should trigger an alert and pause the workflow
 - we should have a manual triggering mechanism to handle situations where the delay is communicated directly by the company

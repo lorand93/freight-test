@@ -69,7 +69,7 @@ docker-compose up -d
 # Wait for services to start.
 ```
 
-3. **Configure Environment** (Optional)
+3. ** Configure Environment - Not needed, using only mocks**
 ```bash
 # Set environment variables for production use
 export GOOGLE_MAPS_API_KEY=your_google_maps_api_key
@@ -79,6 +79,7 @@ export DELAY_THRESHOLD_MINUTES=30
 ```
 
 ### Running the System
+To run the system first make sure you have the Temporal server running.
 
 1. **Start the Worker** (in one terminal)
 ```bash
@@ -113,26 +114,6 @@ npm run client
 - **Purpose**: Send SMS notifications as email fallback
 - **Configuration**: Set Twilio credentials
 - **Fallback**: Mock SMS sending for demo purposes
-
-## Configuration
-
-### Environment Variables
-
-```bash
-# API Configuration
-OPENAI_API_KEY=sk-proj-... # (Already configured)
-GOOGLE_MAPS_API_KEY=your_google_maps_api_key
-SENDGRID_API_KEY=your_sendgrid_api_key
-
-# Temporal Configuration
-TEMPORAL_ADDRESS=localhost:7233
-TEMPORAL_NAMESPACE=default
-
-# Application Configuration
-DELAY_THRESHOLD_MINUTES=30
-FROM_EMAIL=noreply@freightnotifications.com
-CUSTOMER_EMAIL=customer@example.com
-```
 
 ### Temporal Web UI
 Access the Temporal Web UI at `http://localhost:8088`.
